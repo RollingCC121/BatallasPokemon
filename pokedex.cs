@@ -8,15 +8,15 @@ namespace PokemonBattleGame
     {
         public static List<Pokemon> Pokemones = new()
         {
-            new Pokemon("Charmander", "Fuego", 100, new List<Ataque> {
+            new PokemonFuego("Charmander", 100, new List<Ataque> {
                 new Ataque("Lanzallamas", 30, 85),
                 new Ataque("Ascuas", 20, 95)
             }),
-            new Pokemon("Squirtle", "Agua", 110, new List<Ataque> {
+            new PokemonAgua("Squirtle", 110, new List<Ataque> {
                 new Ataque("Pistola Agua", 25, 90),
                 new Ataque("Burbuja", 20, 95)
             }),
-            new Pokemon("Bulbasaur", "Planta", 105, new List<Ataque> {
+            new PokemonPlanta("Bulbasaur", 105, new List<Ataque> {
                 new Ataque("Latigazo", 25, 90),
                 new Ataque("Drenadoras", 15, 100)
             })
