@@ -13,10 +13,9 @@ class Program
             switch (opcion)
             {
                 case 1:
-                    Console.Clear();
-                    Console.WriteLine("🚀 Comenzando aventura...\n");
-                    Thread.Sleep(1000);
-                    // Aquí podrías invocar Batallas.Iniciar() más adelante
+                    int indice = Interfaz.ElegirPokemon();
+                    Pokemon elegido = Pokedex.Pokemones[indice];
+                    Batallas.IniciarBatalla(elegido);
                     break;
 
                 case 2:
