@@ -41,6 +41,12 @@ namespace PokemonBattleGame
         {
             HP -= cantidad;
         }
+
+        // Sobrecarga: solo recibe la cantidad de daño (ataque normal)
+        public void RecibirDanio(int cantidad)
+        {
+            HP -= cantidad;
+        }
     }
 
     // Clase hija: Fuego
