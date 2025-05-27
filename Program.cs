@@ -13,7 +13,7 @@ class Program
             switch (opcion)
             {
                 case 1:
-                       int indice = Interfaz.ElegirPokemon();
+                    int indice = Interfaz.ElegirPokemon();
                     Pokemon elegido = Pokedex.Pokemones[indice];
                     Batallas.IniciarBatalla(elegido);
                     break;

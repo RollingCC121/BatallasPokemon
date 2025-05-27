@@ -27,27 +27,9 @@ namespace PokemonBattleGame
 
             while (vidaJugador > 0 && vidaEnemigo > 0)
             {
-                Console.WriteLine($"Tu vida: {vidaJugador}");
-                Console.WriteLine($"Vida enemigo: {vidaEnemigo}");
-                Console.WriteLine();
-                Console.WriteLine("1. Atacar");
-                Console.WriteLine("2. Huir");
-                Console.Write("Elige acción: ");
-                int accion = Utils.LeerOpcion(1, 2);
+                // Aquí debes mostrar el menú de batalla
+                Interfaz.MostrarPantallaBatalla(jugador, vidaJugador, enemigo, vidaEnemigo, jugador.Ataques);
 
-                if (accion == 2)
-                {
-                    Console.WriteLine("¡Huiste de la batalla!");
-                    break;
-                }
-
-                // Turno jugador ataca
-                Console.WriteLine("\nElige un ataque:");
-                for (int i = 0; i < jugador.Ataques.Count; i++)
-                {
-                    var atk = jugador.Ataques[i];
-                    Console.WriteLine($"{i + 1}. {atk.Nombre} (Daño: {atk.Daño}, Precisión: {atk.Precision}%)");
-                }
                 int eleccion = Utils.LeerOpcion(1, jugador.Ataques.Count);
                 Ataque ataqueElegido = jugador.Ataques[eleccion - 1];
 
