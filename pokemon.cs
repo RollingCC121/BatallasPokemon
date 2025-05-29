@@ -5,47 +5,62 @@ namespace PokemonBattleGame
     // Clase que representa un ataque
     public class Ataque
     {
-        public string Nombre { get; set; }
-        public int Daño { get; set; }
-        public int Precision { get; set; }
-        public string Tipo { get; set; } 
+        private string _nombre;
+        private int _daño;
+        private int _precision;
+        private string _tipo;
+
+        public string Nombre => _nombre;
+        public int Daño => _daño;
+        public int Precision => _precision;
+        public string Tipo => _tipo;
 
         public Ataque(string nombre, int daño, int precision, string tipo)
         {
-            Nombre = nombre;
-            Daño = daño;
-            Precision = precision;
-            Tipo = tipo;
+            _nombre = nombre;
+            _daño = daño;
+            _precision = precision;
+            _tipo = tipo;
         }
     }
 
     // Clase base para todos los Pokémon
     public class Pokemon
     {
-        public string Nombre { get; set; }
-        public string Tipo { get; set; }
-        public int HP { get; set; }
-        public List<Ataque> Ataques { get; set; }
+         private string _nombre;
+        private string _tipo;
+        private int _hp;
+        private List<Ataque> _ataques;
+
+        public string Nombre => _nombre;
+        public string Tipo => _tipo;
+        //public int HP => _hp;
+        public List<Ataque> Ataques => _ataques;
+         public int HP
+        {
+        get => _hp;
+        set => _hp = value < 0 ? 0 : value;  // Evita HP negativos
+        }
 
         public Pokemon(string nombre, string tipo, int hp, List<Ataque> ataques)
         {
-            Nombre = nombre;
-            Tipo = tipo;
-            HP = hp;
-            Ataques = ataques;
+            _nombre = nombre;
+            _tipo = tipo;
+            _hp = hp;
+            _ataques = ataques;
         }
 
         // MÉTODO VIRTUAL: Puede ser sobrescrito por las clases hijas
         // Recibe daño y descuenta HP
         public virtual void RecibirDanio(int cantidad, string tipoAtaque)
         {
-            HP -= cantidad;
+            _hp -= cantidad;
         }
 
         // Sobrecarga: solo recibe la cantidad de daño (ataque normal)
         public void RecibirDanio(int cantidad)
         {
-            HP -= cantidad;
+            _hp -= cantidad;
         }
     }
 
