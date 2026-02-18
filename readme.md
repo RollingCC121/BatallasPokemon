@@ -46,7 +46,8 @@ El propósito de este proyecto es aplicar conceptos de Programación Orientada a
 ---
   ## Diagrama de clases principales
 
-  (https://github.com/user-attachments/assets/1b5a9540-a652-491e-9f3a-974860913a0f)
+ 
+![Diagrama_UML](https://github.com/user-attachments/assets/b822ff71-19ca-4a25-b515-68b6e09a5e01)
 
   
 ---
