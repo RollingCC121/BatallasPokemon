@@ -23,7 +23,7 @@ El juego se ejecuta en la consola y cuenta con **menús ASCII estilo retro**, se
 
 A continuación se muestra el diagrama de clases UML que representa la arquitectura del sistema:
 
-![Diagrama UML - Batallas Pokémon](images/Pokemon Damage Calculation-2026-02-19-002035.png)
+![Diagrama UML - Batallas Pokémon](images/Pokemon%20Damage%20Calculation-2026-02-19-002035.png)
 
 *Diagrama de clases mostrando las relaciones entre Pokemon (clase base), sus clases derivadas (PokemonFuego, PokemonAgua, PokemonPlanta) y la clase Ataque. Se puede observar la herencia, composición y los métodos polimórficos implementados.*
 
